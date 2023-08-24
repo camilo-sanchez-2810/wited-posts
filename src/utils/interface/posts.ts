@@ -8,3 +8,8 @@ export interface IPost {
 export interface IPostState {
   posts: IPost[];
 }
+
+export interface IPostProps {
+  title: string;
+  body: string;
+}

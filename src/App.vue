@@ -1,14 +1,14 @@
-<script setup lang="ts">
-  import { usePostsStore } from './stores'
-  usePostsStore()
-</script>
-
 <template>
-  <main class="bg-black">
-    <h1 class="text-white">Test</h1>
-  </main>
+	<main class="min-h-screen py-4 bg-slate-900">
+    <header class="pb-4">
+      <h1 class="text-center font-bold text-3xl text-green-700">WITED POSTS</h1>
+    </header>
+    <PostContainer />
+	</main>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import PostContainer from '@/components/posts/Posts.vue'
+</script>
 
-</style>
+<style scoped></style>
