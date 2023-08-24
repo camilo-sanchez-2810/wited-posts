@@ -1,5 +1,6 @@
 <script setup lang="ts">
-
+  import { usePostsStore } from './stores'
+  usePostsStore()
 </script>
 
 <template>
