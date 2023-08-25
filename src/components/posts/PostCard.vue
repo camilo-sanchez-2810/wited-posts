@@ -1,5 +1,5 @@
 <template>
-  		<article class="text-slate-900 my-5 px-2 odd:bg-slate-800 py-5 sm:rounded-md md:px-6">
+  		<article class="text-slate-900 my-5 px-2 hover:bg-slate-800 transition-colors duration-200 py-5 sm:rounded-md md:px-6">
 			<div class="flex mb-4 items-center gap-5">
 				<img
 					src="https://dummyimage.com/600x600/61d94c/ffffff&text=x"
@@ -26,14 +26,16 @@
 			</div>
 			<div class="flex justify-end mt-4">
 				<button
-					class="border border-green-500 text-gray-200 px-4 py-1 rounded-xl hover:text-slate-900 hover:bg-green-500 transition-all duration-200 active:bg-green-700 active:border-green-700 active:text-slate-950"
+					class="border border-green-500 text-gray-200 px-4 py-1 rounded-xl hover:text-slate-900 hover:bg-green-500 transition-colors duration-200 active:bg-green-700 active:border-green-700 active:text-slate-950"
 					>Ver Mas</button
 				>
 			</div>
 		</article>
+    <div class="border-b border-slate-600"></div>
 </template>
 
 <script setup lang="ts">
 import { IPostProps } from "@/utils"
-defineProps<IPostProps>()
+const props = defineProps<IPostProps>()
+console.log(props.id)
 </script>
