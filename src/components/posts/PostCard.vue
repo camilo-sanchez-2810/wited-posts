@@ -10,7 +10,7 @@
 					<div
 						class="flex justify-between text-sm text-gray-500"
 					>
-						<p class="font-semibold">Usuario X</p>
+						<p class="font-semibold">{{ user }}</p>
 						<p>24 agosto 2023</p>
 					</div>
 				</div>
@@ -35,14 +35,16 @@
 </template>
 
 <script setup lang="ts">
-import { IPostProps } from "@/utils"
-// import { onMounted, ref } from "vue";
-// import axios from 'axios'
+import { IPostProps, USERS_ENDPOINT } from "@/utils"
+import { onMounted, ref } from "vue";
+import axios from 'axios'
 const props = defineProps<IPostProps>()
-// const user = ref()
+const user = ref()
 
-// onMounted(() => {
-//   axios.get()
-// })
-console.log(props.id, props.userId)
+onMounted(() => {
+  axios.get(`${USERS_ENDPOINT}${props.userId}`)
+    .then((response) => {
+      user.value = response.data.name
+    })
+})
 </script>
