@@ -36,6 +36,13 @@
 
 <script setup lang="ts">
 import { IPostProps } from "@/utils"
+// import { onMounted, ref } from "vue";
+// import axios from 'axios'
 const props = defineProps<IPostProps>()
-console.log(props.id)
+// const user = ref()
+
+// onMounted(() => {
+//   axios.get()
+// })
+console.log(props.id, props.userId)
 </script>

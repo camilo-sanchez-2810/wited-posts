@@ -6,6 +6,7 @@
 			:title="post.title"
 			:body="post.body"
 			:id="post.id"
+			:userId="post.userId"
 			/>
 	</div>
 </template>

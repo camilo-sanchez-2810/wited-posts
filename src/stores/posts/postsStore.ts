@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { IPostState, IPost } from "@/utils";
+import { IPostState, IPost, POSTS_ENDPOINT } from "@/utils";
 import axios from "axios";
 
 export const usePostsStore = defineStore('posts', {
@@ -10,7 +10,7 @@ export const usePostsStore = defineStore('posts', {
   },
   actions: {
     async setPosts(): Promise<void> {
-      const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
+      const response = await axios.get(POSTS_ENDPOINT)
       this.posts = response.data
     },
     getLimitedPosts: function(start: number, end: number): IPost[] {
