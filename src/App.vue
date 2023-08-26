@@ -3,12 +3,12 @@
     <header class="pb-4">
       <h1 class="text-center font-bold text-3xl text-green-700">WITED POSTS</h1>
     </header>
-    <PostContainer />
+    <RouterView />
 	</main>
 </template>
 
 <script setup lang="ts">
-import PostContainer from '@/components/posts/Posts.vue'
+import { RouterView } from 'vue-router';
 </script>
 
 <style scoped></style>

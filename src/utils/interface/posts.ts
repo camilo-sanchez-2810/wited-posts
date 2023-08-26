@@ -7,6 +7,7 @@ export interface IPost {
 
 export interface IPostState {
   posts: IPost[];
+  post?: IPost
 }
 
 export interface IPostProps {
