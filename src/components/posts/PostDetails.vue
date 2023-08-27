@@ -20,8 +20,8 @@
           </div>
         </div>
       </div>
-    <div class="sm:px-12">
-      <h1 class="text-slate-100 text-3xl mb-5 font-bold">{{ store.getPost?.title }}</h1>
+    <div class="sm:px-14">
+      <h1 class="text-slate-100 text-2xl mb-5 font-bold">{{ store.getPost?.title }}</h1>
       <p class="text-slate-300">{{ store.getPost?.body }}</p>
     </div>
   </article>

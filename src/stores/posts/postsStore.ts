@@ -17,7 +17,7 @@ export const usePostsStore = defineStore('posts', {
     getLimitedPosts: function(start: number, end: number): IPost[] {
       return this.posts.slice(start, end)
     },
-    async getOnePost(id: number): Promise<void> {
+    async setOnePost(id: number): Promise<void> {
       const response = await axios.get(`${POSTS_ENDPOINT}/${id}`)
       this.post = response.data
     }

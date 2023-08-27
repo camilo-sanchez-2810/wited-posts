@@ -17,7 +17,7 @@
 				</div>
 			</div>
 		</div>
-		<div>
+		<div class="sm:px-16">
 			<h3
 				class="text-lg text-start font-semibold text-gray-200"
 				>{{ title }}</h3
