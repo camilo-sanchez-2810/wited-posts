@@ -15,34 +15,28 @@
           <div
             class="flex justify-between text-sm text-slate-500"
           >
-            <p class="font-semibold">{{ user }}</p>
+            <p class="font-semibold">{{ userStore.getUser?.name }}</p>
             <p>24 agosto 2023</p>
           </div>
         </div>
       </div>
     <div class="sm:px-14">
-      <h1 class="text-slate-100 text-2xl mb-5 font-bold">{{ store.getPost?.title }}</h1>
-      <p class="text-slate-300">{{ store.getPost?.body }}</p>
+      <h1 class="text-slate-100 text-2xl mb-5 font-bold">{{ postStore.getPost?.title }}</h1>
+      <p class="text-slate-300">{{ postStore.getPost?.body }}</p>
     </div>
   </article>
 </template>
 
 <script setup lang="ts">
-import { usePostsStore } from '@/stores';
-import axios from "axios";
-import { USERS_ENDPOINT } from "@/utils";
-import { onMounted, ref } from 'vue';
+import { usePostsStore, useUserStore } from '@/stores';
+import { onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
 
-const store = usePostsStore()
-const user = ref<string>()
+const postStore = usePostsStore()
+const userStore = useUserStore()
 
 onMounted(() => {
-  axios
-		.get(`${USERS_ENDPOINT}${store.getPost?.userId}`)
-		.then((response) => {
-			user.value = response.data.name;
-		});
+  userStore.setUser(Number(postStore.getPost?.userId))
 })
 
 </script>
