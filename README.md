@@ -1,18 +1,47 @@
-# Vue 3 + TypeScript + Vite
+# Prueba tecnica wited
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+![Static Badge](https://img.shields.io/badge/node_version-18.16.1-44cc44)
+![Static Badge](https://img.shields.io/badge/npm_version-9.8.0-4444cc)
 
-## Recommended IDE Setup
+## Descripcion
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Este repositorio contiene el código correspondiente a la prueba técnica realizada para [Wited](https://www.wited.com/). El objetivo de esta prueba es desarrollar una aplicación que muestre una serie de publicaciones realizadas por usuarios en la plataforma, utilizando una API externa para obtener los datos necesarios. Cada publicación debe ser enlazada a una página de detalles correspondiente.
 
-## Type Support For `.vue` Imports in TS
+## Detalles tecnicos
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+La prueba fue realizada con las siguientes tecnologias:
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+- [node](https://nodejs.org/) v18.16.1
+- [npm](https://www.npmjs.com/) v9.8.0
+- [vite](https://vitejs.dev/)
+- [tailwind](https://tailwindcss.com/) v3.3.3
+- [pinia](https://pinia.vuejs.org/) v2.1.6
+- [axios](https://axios-http.com/) v1.4.0
+- [vue-router](https://router.vuejs.org/) v4.2.4
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## Instalacion
+
+Anotacion: antes de instalar el proyecto, primero se debe configurar un archivo .env con la variable `VITE_API_URL`, el cual contiene la direccion de la api. La api utilizada fue "https://jsonplaceholder.typicode.com/"
+
+Clonacion e instalacion de paquetes:
+
+```
+$ git clone https://github.com/camilo-sanchez-2810/wited-posts.git
+
+$ cd wited-posts
+
+$ npm install
+```
+
+Ejecucion de la aplicacion en modo desarrollo:
+
+```
+$ npm run dev
+```
+
+Compilacion y ejecucion de la aplicacion:
+
+```
+$ npm run build
+$ npm run preview
+```
